@@ -5,24 +5,17 @@ import TokenIcon from '@/assets/icons/token.png'
 
 const ExampleItems = [
   {
-    title: 'Send Ether',
-    description: 'Sending Ether to another address is the most basic, common transaction that you can do.',
+    title: 'Register Youtube',
+    description: 'Regsiter your Youtube video on Story Protocol.',
     image: EtherIcon.src,
-    url: '/examples/send-ether',
-  },
-  {
-    title: 'Send ERC20 Token',
-    description:
-      'ERC20 introduces a standard interface for fungible tokens. Use this example to send any ERC20 to another address.',
-    image: TokenIcon.src,
-    url: '/examples/send-token',
+    url: '/examples/youtube',
   },
 ]
 
 export default function Home() {
   return (
     <>
-      <h2 className='text-xl'>Nexth Examples</h2>
+      <h2 className='text-xl'>Menu</h2>
 
       <p className='mb-4'>
         All these examples can be found in the main repo at <code>src/app/examples</code> to help you bootstrap
