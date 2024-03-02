@@ -2,11 +2,7 @@ import { CardList } from '@/components/CardList'
 import OliveJuice from '@/assets/icons/olivejuice.png'
 import TokenIcon from '@/assets/icons/token.png'
 import dynamic from 'next/dynamic'
-
-const G6component = dynamic(
-  () => import('../../components/Graph'),
-  { ssr: false }
-)
+import { LinkComponent } from '@/components/LinkComponent'
 
 const ExampleItems = [
   {
@@ -22,7 +18,7 @@ export default function Home() {
   return (
     <>
       <div className='text-center'>
-        <h2 className='text-4xl'>IP SCANNER</h2>
+        <h2 className='text-4xl'>OLIVE JUICE: AN IP SCANNER</h2>
         <p>
           <i>Powered by Story Protocol</i>
         </p>
@@ -33,17 +29,16 @@ export default function Home() {
 
       {/* Button treatment for "Register a Video" */}
       <div className='text-center mt-8'>
-        <button className='bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded'>
-          Register your video on Story Protocol
-        </button>
+        <LinkComponent
+            className='bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded'
+            href='/examples/youtube'>
+            Register your video and discover its social provenance
+          </LinkComponent>
         <br></br>
         <br></br>
         <p className='text-lg mb-4'>
           Connect your wallet. Mint your video on Story Protocol. Scan Twitter to see who is using your work.
         </p>
-      </div>
-      <div>
-        <G6component />
       </div>
     </>
   )

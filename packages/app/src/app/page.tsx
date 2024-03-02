@@ -7,7 +7,7 @@ export default function Home() {
       {/* Centered container */}
       <div className='text-center'>
         {/* Large text */}
-        <h2 className='text-5xl mb-4'>IP Scanner</h2>
+        <h2 className='text-5xl mb-4'>OLIVE JUICE: AN IP Scanner</h2>
         {/* Site description */}
         <p>{SITE_DESCRIPTION}</p>
         {/* Button with outline */}

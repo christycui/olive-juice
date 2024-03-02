@@ -29,7 +29,7 @@ export default function MintNft({
     await writeContractAsync({
       address: '0x74B2f5F62023Cb99b1f33f5D68a51ed5D54437c7', // Youtube ERC721 contract address to mint from
       functionName: 'safeMint',
-      args: [address, string],
+      args: [address, 'https://youtu.be/ioxdYyjdTDI?si=FxtUfiqNY8zdID2R'],
       abi: [
         {
           inputs: [{ internalType: 'address', name: 'to', type: 'address' }, { internalType: 'string', name: 'uri', type: 'string' }],

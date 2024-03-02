@@ -14,7 +14,14 @@ const G6component = () => {
         {
           id: 'node1',
           x: 100,
-          y: 100
+          y: 100,
+          labelShape: {
+            text: "root IP"
+          },
+          labelBackgroundShape: {},
+          iconShape: {
+            img: 'https://gw.alipayobjects.com/zos/basement_prod/012bcf4f-423b-4922-8c24-32a89f8c41ce.svg',
+          },
         },
         {
           id: 'node2',
@@ -37,6 +44,16 @@ const G6component = () => {
       renderer: "svg",
       modes: {
         default: ["zoom-canvas", "drag-node","drag-canvas"],
+      },
+      layout: {
+        type: 'fruchterman',
+        gravity: 10,
+        speed: 5,
+        clustering: true,
+      },
+      animate: true,
+      defaultNode: {
+        size: 20,
       },
       minZoom: 0.5,
       maxZoom: 3,

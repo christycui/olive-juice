@@ -5,6 +5,7 @@ import MintNft from './MintNft';
 import RegisterIpAsset from './RegisterIpAsset';
 import RegisterDerivativeIp from './RegisterDerivativeIpAsset';
 import { useEffect, useState } from 'react';
+import { LinkComponent } from '@/components/LinkComponent'
 
 
 export default function Home() {
@@ -32,30 +33,21 @@ export default function Home() {
         ) : (
           <>
             {' '}
-            Follow these steps to register an NFT as an IP asset, add licensing
-            terms, and mint a license. Use Etherscan to look at the events
-            emitted to get the necessary information.
+            Register your video and discover its social provenance
           </>
         )}
       </div>
       {isConnected && (
         <div className="w-full flex flex-col gap-4">
+          <label for="fname">Your Youtube Video Link:</label>
+          <input type='text' name='Youtube Link'></input>
           <MintNft />
           <RegisterIpAsset />
-
-          <p className="text-center mt-8 text-lg">
-            Continue with these steps to register a derivative NFT
-          </p>
-          <MintNft
-            text={'6. Mint a new NFT to represent a derivative artwork NFT'}
-            buttonText={'Mint derivative NFT'}
-          />
-          <RegisterDerivativeIp />
-
-          {/* <TextAndButton
-            description="5. Specify the licenseId and derivative NFT details in RegisterDerivativeIp.tsx"
-            ActionComponent={RegisterDerivativeIp}
-          />  */}
+          <LinkComponent
+            className='bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded'
+            href='/examples/show-graph'>
+            See your video's social graph.
+          </LinkComponent>
         </div>
       )}
     </main>
