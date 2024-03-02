@@ -27,16 +27,14 @@ export default function MintNft({
 
   async function handleMintNft() {
     await writeContractAsync({
-      address: '0x7ee32b8b515dee0ba2f25f612a04a731eec24f49', // dummy ERC721 contract address to mint from
-      functionName: 'mint',
-      args: [address],
+      address: '0x74B2f5F62023Cb99b1f33f5D68a51ed5D54437c7', // Youtube ERC721 contract address to mint from
+      functionName: 'safeMint',
+      args: [address, string],
       abi: [
         {
-          inputs: [{ internalType: 'address', name: 'to', type: 'address' }],
-          name: 'mint',
-          outputs: [
-            { internalType: 'uint256', name: 'tokenId', type: 'uint256' },
-          ],
+          inputs: [{ internalType: 'address', name: 'to', type: 'address' }, { internalType: 'string', name: 'uri', type: 'string' }],
+          name: 'safeMint',
+          outputs: [],
           stateMutability: 'nonpayable',
           type: 'function',
         },

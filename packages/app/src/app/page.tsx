@@ -3,13 +3,22 @@ import { SITE_DESCRIPTION } from '@/utils/site'
 
 export default function Home() {
   return (
-    <>
-      <h2 className='text-lg'>Next.js + Ethereum starter kit</h2>
-      <p>{SITE_DESCRIPTION}</p>
-
-      <p className='mt-4'>
-        <LinkComponent href='/examples'>View examples</LinkComponent> to bootstrap development.
-      </p>
-    </>
+    <div className='flex flex-col items-center justify-center h-screen'>
+      {/* Centered container */}
+      <div className='text-center'>
+        {/* Large text */}
+        <h2 className='text-5xl mb-4'>IP Scanner</h2>
+        {/* Site description */}
+        <p>{SITE_DESCRIPTION}</p>
+        {/* Button with outline */}
+        <p className='mt-4'>
+          <LinkComponent
+            className='inline-block border border-green-600 rounded px-4 py-2 text-green-600 hover:bg-green-600 hover:text-white'
+            href='/examples'>
+            See who's using your Intellectual Property
+          </LinkComponent>
+        </p>
+      </div>
+    </div>
   )
 }

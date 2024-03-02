@@ -1,6 +1,5 @@
 import { CardList } from '@/components/CardList'
-
-import EtherIcon from '@/assets/icons/ethereum.png'
+import OliveJuice from '@/assets/icons/olivejuice.png'
 import TokenIcon from '@/assets/icons/token.png'
 import dynamic from 'next/dynamic'
 
@@ -13,7 +12,7 @@ const ExampleItems = [
   {
     title: 'Register Youtube',
     description: 'Regsiter your Youtube video on Story Protocol.',
-    image: EtherIcon.src,
+    image: OliveJuice.src,
     url: '/examples/youtube',
   },
 ]
@@ -22,14 +21,27 @@ const ExampleItems = [
 export default function Home() {
   return (
     <>
-      <h2 className='text-xl'>Menu</h2>
+      <div className='text-center'>
+        <h2 className='text-4xl'>IP SCANNER</h2>
+        <p>
+          <i>Powered by Story Protocol</i>
+        </p>
+      </div>
 
-      <p className='mb-4'>
-        All these examples can be found in the main repo at <code>src/app/examples</code> to help you bootstrap
-        development. You can delete the entire folder before deploying your own App.
-      </p>
+      {/* Large image placed outside the card */}
+      <img src={OliveJuice.src} alt='Olive Juice' className='mx-auto mt-8' />
 
-      <CardList title='Examples' items={ExampleItems} />
+      {/* Button treatment for "Register a Video" */}
+      <div className='text-center mt-8'>
+        <button className='bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded'>
+          Register your video on Story Protocol
+        </button>
+        <br></br>
+        <br></br>
+        <p className='text-lg mb-4'>
+          Connect your wallet. Mint your video on Story Protocol. Scan Twitter to see who is using your work.
+        </p>
+      </div>
       <div>
         <G6component />
       </div>
