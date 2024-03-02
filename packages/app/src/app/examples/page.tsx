@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <div className='text-center'>
-        <h2 className='text-4xl'>OLIVE JUICE: AN IP SCANNER</h2>
+        <h2 className='text-4xl'>OLIVE JUICE: an IP Scanner</h2>
         <p>
           <i>Powered by Story Protocol</i>
         </p>
