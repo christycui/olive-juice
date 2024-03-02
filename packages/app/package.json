@@ -38,7 +38,8 @@
     "viem": "^2.7.6",
     "wagmi": "^2.5.7",
     "connectkit": "^1.7.1",
-    "@story-protocol/react": "0.0.1-beta.4"
+    "@story-protocol/react": "0.0.1-beta.4",
+    "@antv/g6": "^4.8.24"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",

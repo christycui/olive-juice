@@ -10,5 +10,9 @@
     "dev": "yarn workspaces -pt run dev",
     "build": "yarn workspaces -pt run build",
     "test": "yarn workspaces -pt run test"
+  },
+  "dependencies": {
+    "@antv/g6": "^5.0.0-beta.28",
+    "regraph": "^0.0.1"
   }
 }

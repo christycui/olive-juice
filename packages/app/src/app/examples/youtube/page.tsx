@@ -6,6 +6,7 @@ import RegisterIpAsset from './RegisterIpAsset';
 import RegisterDerivativeIp from './RegisterDerivativeIpAsset';
 import { useEffect, useState } from 'react';
 
+
 export default function Home() {
   const { isConnected } = useAccount();
 

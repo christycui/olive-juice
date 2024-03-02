@@ -2,6 +2,12 @@ import { CardList } from '@/components/CardList'
 
 import EtherIcon from '@/assets/icons/ethereum.png'
 import TokenIcon from '@/assets/icons/token.png'
+import dynamic from 'next/dynamic'
+
+const G6component = dynamic(
+  () => import('../../components/Graph'),
+  { ssr: false }
+)
 
 const ExampleItems = [
   {
@@ -11,6 +17,7 @@ const ExampleItems = [
     url: '/examples/youtube',
   },
 ]
+
 
 export default function Home() {
   return (
@@ -23,6 +30,9 @@ export default function Home() {
       </p>
 
       <CardList title='Examples' items={ExampleItems} />
+      <div>
+        <G6component />
+      </div>
     </>
   )
 }
