@@ -13,15 +13,22 @@ const G6component = () => {
       nodes: [
         {
           id: 'node1',
+          label: 'IP ID: 0x91271D21394Cb0A8EcCc4E2F8c14A6ef33490fB5',
           x: 100,
           y: 100,
-          labelShape: {
-            text: "root IP"
+          text: 'root IP',
+          shape: 'circle',
+          style: {
+            fill: '#f00',
+            fontSize: 14,
           },
-          labelBackgroundShape: {},
-          iconShape: {
-            img: 'https://gw.alipayobjects.com/zos/basement_prod/012bcf4f-423b-4922-8c24-32a89f8c41ce.svg',
+          labelCfg: {
+            style: {
+              fill: '#fff',
+              fontSize: 12,
+            },
           },
+          textBaseline: 'bottom',
         },
         {
           id: 'node2',
@@ -43,7 +50,7 @@ const G6component = () => {
       height: "100%",
       renderer: "svg",
       modes: {
-        default: ["zoom-canvas", "drag-node","drag-canvas"],
+        default: ["zoom-canvas", "drag-node","drag-canvas", 'click-select', 'hover-activate', 'brush-select'],
       },
       layout: {
         type: 'fruchterman',

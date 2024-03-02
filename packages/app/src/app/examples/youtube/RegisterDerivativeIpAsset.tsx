@@ -19,9 +19,9 @@ export default function RegisterDerivativeIp() {
   // const nftTokenId = BigInt(5); // The derivative IP's token ID.
   const nftContract = '0x7ee32b8b515dee0ba2f25f612a04a731eec24f49'; // The derivative IP's contract address
 
-  const ipName = 'Derivative';
+  const ipName = 'Tweet';
   const contentHash = stringToHex('0x', { size: 32 });
-  const externalUrl = 'ipfs.io/derivative';
+  const externalUrl = 'https://twitter.com/little_cxx/status/1763864346172522586';
   const royaltyContext = '0x';
 
   async function handleClick() {
