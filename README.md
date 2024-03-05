@@ -1,53 +1,21 @@
-# Nexth
+# Olive Juice
 
-A Next.js + Ethereum starter kit to quickly ship Web3 Apps ⚡
+Built at EthDenver 2024.
 
-![Nexth Readme Image](./readme.png)
+Olive Juice allows creators who have registered their content on Story Protocol to identify if, and how, their minted IP has been used by other creators. Starting with remixes posted on Twitter, Olive Juice aims to scale to other platforms where user content is shared.
 
-## Packages 📦
+Through Olive Juice, creators can see how their content is being used, by whom, and determine whether they wish to file a dispute, or potentially even remix the remix! Additionally, Olive Juice will register the derivative IP automatically onto Story Protocol for IP provenance. If they wish, the derivative creators can also claim their registered IP from Olive Juice at a later date.
 
-- [App](./packages/app) - Next.js 13, with App router
-- [Hardhat](./packages/hardhat/) - Hardhat projects
-- [Foundry](./packages/foundry/) - Foundry projects
+This project was scaffolded with [zksync-cli](https://github.com/matter-labs/zksync-cli).
 
-Choose the framework to use, "hardhat" or "foundry", eliminating the one we will not use.
+## Project Layout
 
-1- Delete the folder of the framework that will not be used:
-./packages/hardhat/ or ./packages/foundry/
+- `/contracts`: Contains solidity smart contracts.
+- `/deploy`: Scripts for contract deployment and interaction.
+- `/test`: Test files.
+- `hardhat.config.ts`: Configuration settings.
 
-2- Go to "packages/app/wagmi.config.ts" and remove the plugin that will not be used.
+## How to Use
 
-```ts
-hardhat({
-    project: '../hardhat',
-    deployments: {
-    Message: {
-        11155111: '0xcc5a0d6268d70811edad77799f2168afe6382e89',
-    },
-    },
-}),
-foundry({
-    project: '../foundry',
-    deployments: {
-    Message: {
-        11155111: '0xcc5a0d6268d70811edad77799f2168afe6382e89',
-    },
-    },
-}),
-```
-
-## Development 🛠️
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-## Deploy on Vercel 🚢
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwslyvh%2Fnexth)
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=nexth&filter=next.js&utm_source=nexth&utm_campaign=nexth-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `yarn install`
+- `yarn dev`
