@@ -2,10 +2,13 @@
 import { useAccount } from 'wagmi';
 
 import MintNft from './MintNft';
+import RegisterPILPolicy from './RegisterPILPolicy';
+import MintLicense from './MintLicense';
 import RegisterIpAsset from './RegisterIpAsset';
 import RegisterDerivativeIp from './RegisterDerivativeIpAsset';
 import { useEffect, useState } from 'react';
 import { LinkComponent } from '@/components/LinkComponent'
+import AddPolicyToIp from './AddPolicyToIpAsset';
 
 
 export default function Home() {
@@ -43,6 +46,7 @@ export default function Home() {
           <input type='text' name='Youtube Link'></input>
           <MintNft />
           <RegisterIpAsset />
+
           <LinkComponent
             className='bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded'
             href='/examples/show-graph'>

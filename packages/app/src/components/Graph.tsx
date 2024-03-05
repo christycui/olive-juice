@@ -13,7 +13,7 @@ const G6component = () => {
       nodes: [
         {
           id: 'node1',
-          label: 'IP ID: 0x91271D21394Cb0A8EcCc4E2F8c14A6ef33490fB5',
+          label: 'Root ID: 0x91271D21394Cb0A8EcCc4E2F8c14A6ef33490fB5 \n Youtube',
           x: 100,
           y: 100,
           text: 'root IP',
@@ -28,18 +28,48 @@ const G6component = () => {
               fontSize: 12,
             },
           },
-          textBaseline: 'bottom',
         },
         {
           id: 'node2',
-          x: 200,
-          y: 100
+          x: 400,
+          y: 200,
+          label: 'Derivative IP: 0x0cb2741a3713084d77a30f8eff191e6d4182eefe \nTwitter',
+          style: {
+            fill: '#1DA1F2',
+            fontSize: 14,
+          },
+          labelCfg: {
+            style: {
+              fill: '#fff',
+              fontSize: 12,
+            },
+          },
+        },
+        {
+          id: 'node3',
+          x: 400,
+          y: 250,
+          label: 'Derivative IP: 0x82b1bd3178fc1ef884302345cfdc3292d63f9d86 \nTwitter',
+          style: {
+            fill: '#1DA1F2',
+            fontSize: 14,
+          },
+          labelCfg: {
+            style: {
+              fill: '#fff',
+              fontSize: 12,
+            },
+          },
         }
       ],
       edges:[
         {
           source: 'node1',
           target: 'node2'
+        },
+        {
+          source: 'node1',
+          target: 'node3'
         }
       ]
     }
